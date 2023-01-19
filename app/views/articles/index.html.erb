@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Articles</h1>
+
+<div data-controller="live-search">
+  <%= render partial: "shared/search_form" %>
+  <div data-target="live-search.results">
+    <% @articles.each do |article| %>
+      <%= render partial: "article", locals: { article: article } %>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+
+<%= link_to "New article", new_article_path %>
