@@ -3,6 +3,6 @@ class ArticleSearchController < ApplicationController
   def index
     puts params
     @current_user = current_user
-    @articles = Article.where("name LIKE ?", "%#{params[:search]}%")
+    @articles = Article.where('name LIKE ?', "%#{params[:search]}%")
   end
 end
