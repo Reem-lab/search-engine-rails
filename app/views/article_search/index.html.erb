@@ -2,4 +2,6 @@
 <p>Find me in app/views/article_search/index.html.erb</p> %>
 
 
-
+<% @articles.each do |article| %>
+  <%= render partial: "articles/article", locals: { article: article } %>
+<% end %>

@@ -1,24 +1,107 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/static/v1?label=BY&message=Reemoz&color=pink)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Search Engine App
 
-Things you may want to cover:
+> About create a realtime search box, where users search articles, and then to have analytics that display what users were searching for. my goal is to record their input in realtime and ultimately display analytics & trends on what people are searching for the most.
+
+
+## vedio demo 🎥
+
+
+
+## Heroku Deploy 🚀
+
+[Live demo here]()
+
+
+
+## Built With
+
+- Ruby
+- Ruby on Rails
+- RSpec, PostgreSQL
+
+## Configuration
+
+To use this project you first need to have installed the following:
+
++ Node.js
++ Ruby
++ PostgreSQL
++ Rails
 
 * Ruby version
 
-* System dependencies
+The version of ruby that is needed for this project is 
 
-* Configuration
++ 3.2.0
 
-* Database creation
+Once you have installed them, you need to use the following command to clone the repository:
 
-* Database initialization
+```
+git clone https://github.com/Reem-lab/search-engine-rails.git
+```
 
-* How to run the test suite
+Then install the bundle configruation by thr following command
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+bundle install
+```
 
-* Deployment instructions
+### Database creation
 
-* ...
+Next, use this command to create the databases:
+```
+rails db:create
+```
+
+## Usage
+
+Finally, use the following command to initialize the live server:
+
+```
+rails s
+```
+## How to run the tests
+
+```
+rspec spec
+```
+### or :
+```
+rspec spec/models
+rspec spec/views
+```
+
+## Authors
+
+
+👤 **Reem Janina**
+
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@Reem-lab](https://github.com/Reem-lab)
+ **Twitter** | [Rem79940127](https://twitter.com/Rem79940127)
+ **LinkdIn** | [reem-janina](https://www.linkedin.com/in/reem-janina-ab74ab21a/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.

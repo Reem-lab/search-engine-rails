@@ -1,15 +1,23 @@
-
-
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "stimulus"
 
 export default class extends Controller {
-
   static targets = [ "results", "form" ]
+  timeout
+  pendingRequest
 
   connect() {
     console.log("Connected!")
   }
-  
+
+  loading() {
+    this.pendingRequest = true
+    setTimeout(() => {
+      if(this.pendingRequest) {
+        this.resultsTarget.innerHTML = "<div>Searching...</div>"
+      }
+    }, 500)
+  }
+
   search() {
     clearTimeout(this.timeout)
     this.timeout = setTimeout(() => {
@@ -18,11 +26,9 @@ export default class extends Controller {
   }
     
 
-      handleResults() {
-        const [data, status, xhr] = event.detail
-        this.resultsTarget.innerHTML = xhr.response
-      }
+  handleResults() {
+    const [data, status, xhr] = event.detail
+    this.resultsTarget.innerHTML = xhr.response
+  }
+    
 }
-
-
-

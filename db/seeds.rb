@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require 'literate_randomizer'
+
+# Article.create(name: LiterateRandomizer.word)
+ 
+(0..10).each do
+  Article.create(name: LiterateRandomizer.sentence)
+end
