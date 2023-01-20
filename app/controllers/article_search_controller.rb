@@ -7,5 +7,4 @@ class ArticleSearchController < ApplicationController
     @current_user = current_user
     @analytic = Analytic.create(event: params[:search], user_id: @current_user)
   end
-
 end

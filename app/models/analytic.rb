@@ -3,6 +3,6 @@ class Analytic < ApplicationRecord
   belongs_to :user
 
   # def save_searches
-    
+
   # end
 end

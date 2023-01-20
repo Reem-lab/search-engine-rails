@@ -1,1 +1,1 @@
-json.partial! "analytics/analytic", analytic: @analytic
+json.partial! 'analytics/analytic', analytic: @analytic
