@@ -13,3 +13,23 @@ require 'literate_randomizer'
 (0..10).each do
   Article.create(name: LiterateRandomizer.sentence)
 end
+
+Ahoy.geocode = false
+ahoy = Ahoy::Tracker.new(request: RequestFaker.new)
+10.times do
+  article = Article.create(
+    name: Faker::Lorem.sentence(word_count: 3),
+  )
+  rand(15..100).times do
+    puts 'Tracking'
+
+    visit = Ahoy::Visit.create!(visit_token: Faker::Alphanumeric.alpha(number: 10))
+    Ahoy::Event.create!(name: 'Ran action',
+                        properties: {
+                          controller: 'articles',
+                          action: 'show',
+                        },
+                        visit:,
+                        time: Faker::Time.between(from: 24.hours.ago, to: Time.now))
+  end
+end

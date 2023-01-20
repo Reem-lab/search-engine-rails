@@ -3,6 +3,8 @@
 <h1>Articles</h1>
 
 <div data-controller="live-search">
+<% turbo_stream_from "ahoy_events" %>
+  <%= render "ahoy/chart", events: @events %>
   <%= render partial: "shared/search_form" %>
   <div data-target="live-search.results">
     <%  @articles.each do |article| %>
