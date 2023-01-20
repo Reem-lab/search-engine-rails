@@ -25,6 +25,12 @@ export default class extends Controller {
     }, 200)
   }
     
+  saveSearch() {
+    clearTimeout(this.timeout)
+    this.timeout = setTimeout(() => {
+      Rails.fire(this.formTarget, 'keydown')
+    }, 400)
+  }
 
   handleResults() {
     const [data, status, xhr] = event.detail
