@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   def index
     # @current_user = current_user
     @articles = Article.all
+    @events = EventAggregatorService.new.aggregate_events
     # @articles = Article.where("lower(name) LIKE ?",  "%#{params[:search]}%")
   end
 
