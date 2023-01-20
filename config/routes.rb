@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :analytics
   devise_for :users
   resources :articles
   resources :article_search, only: [:index]

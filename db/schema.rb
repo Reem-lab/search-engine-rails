@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_19_202650) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_20_170102) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "analytics", force: :cascade do |t|
+    t.string "event"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string "name"
@@ -32,14 +39,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_19_202650) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-#   require 'engtagger'
-# tgr = EngTagger.new
-# text = "Alice chased the big fat cat."
-# tagged = tgr.add_tags(text)
-#  events = Event.where(user_id: params[current_user])
-  
-#  events.each do |e|
-#    e.input
-#    nouns = tgr.get_nouns(tagged)
-#  end
 end
