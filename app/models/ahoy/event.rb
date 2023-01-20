@@ -1,7 +1,7 @@
 class Ahoy::Event < ApplicationRecord
   include Ahoy::QueryMethods
 
-  self.table_name = "ahoy_events"
+  self.table_name = 'ahoy_events'
 
   belongs_to :visit
   belongs_to :user, optional: true
@@ -12,9 +12,9 @@ class Ahoy::Event < ApplicationRecord
 
   def broadcast_event
     events = EventAggregatorService.new.aggregate_events
-    broadcast_replace_to "ahoy_events",
-                          target: "events_chart",
-                          partial: "ahoy/chart",
-                          locals: { events: events }
+    broadcast_replace_to 'ahoy_events',
+                         target: 'events_chart',
+                         partial: 'ahoy/chart',
+                         locals: { events: }
   end
 end

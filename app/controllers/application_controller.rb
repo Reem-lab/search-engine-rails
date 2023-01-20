@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
 
   def track_action
     ahoy.track 'Ran action',
-         request.path_parameters
+               request.path_parameters
   end
 end

@@ -1,6 +1,4 @@
 class EventAggregatorService
-  def initialize; end
-
   def aggregate_events
     Ahoy::Event
       .where(name: 'Ran action')
