@@ -1,4 +1,4 @@
-import { Controller } from "stimulus"
+import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   static targets = [ "results", "form" ]
@@ -19,18 +19,20 @@ export default class extends Controller {
   }
 
   search() {
+    console.log("I am here")
+    console.log(this)
     clearTimeout(this.timeout)
     this.timeout = setTimeout(() => {
       Rails.fire(this.formTarget, 'submit')
-    }, 200)
+    }, 2000)
   }
     
-  saveSearch() {
-    clearTimeout(this.timeout)
-    this.timeout = setTimeout(() => {
-      Rails.fire(this.formTarget, 'keydown')
-    }, 400)
-  }
+  // saveSearch() {
+  //   clearTimeout(this.timeout)
+  //   this.timeout = setTimeout(() => {
+  //     Rails.fire(this.formTarget, 'keydown')
+  //   }, 400)
+  // }
 
   handleResults() {
     const [data, status, xhr] = event.detail

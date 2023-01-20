@@ -2,10 +2,8 @@
 // import "@hotwired/turbo-rails"
 // import "controllers"
 
-window.Rails = require("@rails/ujs")
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-
+import Rails from "@rails/ujs"
 import "controllers"
+
+window.Rails = Rails
 Rails.start()
