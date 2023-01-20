@@ -3,7 +3,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
+    # @current_user = current_user
     @articles = Article.all
+    # @articles = Article.where("lower(name) LIKE ?",  "%#{params[:search]}%")
   end
 
   # GET /articles/1 or /articles/1.json
@@ -12,6 +14,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
+    @current_user = current_user
     @article = Article.new
   end
 
