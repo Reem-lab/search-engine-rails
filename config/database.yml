@@ -84,6 +84,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: search_engine_rails_production
   username: search_engine_rails
   password: <%= ENV["SEARCH_ENGINE_RAILS_DATABASE_PASSWORD"] %>
