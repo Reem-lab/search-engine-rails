@@ -9,6 +9,10 @@
 ## vedio demo 🎥
 
 
+# Database Diagram
+
+![image](https://user-images.githubusercontent.com/58553711/213612334-1c830da1-8988-48dd-8a97-ec256a07e056.png)
+
 
 ## Heroku Deploy 🚀
 
