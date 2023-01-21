@@ -6,7 +6,7 @@
 > About create a realtime search box, where users search articles, and then to have analytics that display what users were searching for. my goal is to record their input in realtime and ultimately display analytics & trends on what people are searching for the most.
 
 
-## vedio demo 🎥
+## video demo 🎥
 
 
 # Database Diagram
